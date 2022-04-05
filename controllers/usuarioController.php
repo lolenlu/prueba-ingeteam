@@ -1,6 +1,9 @@
 <?php
 class usuarioController {
-    public function register($email,$password){
+    public function register($form){
+
+    }
+    public function login($form){
 
     }
 }
