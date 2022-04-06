@@ -1,10 +1,14 @@
 <?php
-class taskModel {
+require_once 'baseModel.php';
+
+class taskModel extends baseModel{
     
-    public function __construct(
-        public string $name,
-        public string $description
-        ){}
+    public string $name;
+    public string $description;
+
+    public function __construct(){
+        parent::__construct();
+    }
 
     public function setName(string $name){
         $this->name = $name;
@@ -20,5 +24,9 @@ class taskModel {
 
     public function getDescription(): string{
         return $this->description;
+    }
+
+    public function saveTaskForUser(int $idUser){
+
     }
 }

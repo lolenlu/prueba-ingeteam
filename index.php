@@ -1,2 +1,4 @@
-<?php header('Location:views/user/login'); ?>
+<?php
+include_once 'controllers/baseController.php';
+?>
 

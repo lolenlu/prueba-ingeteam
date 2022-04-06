@@ -1,2 +1,2 @@
 <?php
-define('base_url',"http://localhost/prueba-ingeteam/views/usuario/login");
+define('base_url',"http://localhost/prueba-ingeteam/");

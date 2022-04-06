@@ -1,3 +1,4 @@
+<?php include_once '../../config/parameters.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,3 +10,4 @@
 	<link rel="stylesheet" type="text/css" href="../../assets/css/index.css">
 </head>
 <body class="align">
+<input type="hidden" id="base_url" name="base_url" value="<?php echo base_url; ?>">
