@@ -10,15 +10,13 @@ $(document).ready(function() {
                 beforeSend:function(xhr, settings){
                 },
                 success:function(data){
-                           console.log('data success: '+data);
-                           $("#errorForm").removeClass('d-none').removeClass('hide').addClass('d-block').addClass('show').html('Registration completed successfully');
+                           $("#errorForm").removeClass('d-none').removeClass('alert-danger').removeClass('hide').addClass('alert-success').addClass('d-block').addClass('show').html('Registration completed successfully');
                             setTimeout(function(){$("#errorForm").addClass('d-none').addClass('hide').removeClass('d-block').removeClass('show').html('');}, 2000);
                 
                 },
                 error: function(data) { 
-                    console.log('data error: '+data);
-                    $("#errorForm").removeClass('d-none').removeClass('hide').addClass('d-block').addClass('show').html('Incorrect registration');
-                    setTimeout(function(){$("#errorForm").addClass('d-none').addClass('hide').removeClass('d-block').removeClass('show').html('');}, 2000);
+                            $("#errorForm").removeClass('d-none').removeClass('alert-success').removeClass('hide').addClass('alert-danger').addClass('d-block').addClass('show').html('Incorrect registration');
+                            setTimeout(function(){$("#errorForm").addClass('d-none').addClass('hide').removeClass('d-block').removeClass('show').html('');}, 2000);
                 }
         });
 
