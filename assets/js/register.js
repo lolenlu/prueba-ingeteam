@@ -14,7 +14,7 @@ $(document).ready(function() {
                 success:function(data){
                            $("#errorForm").removeClass('d-none').removeClass('alert-danger').removeClass('hide').addClass('alert-success').addClass('d-block').addClass('show').html('Registration completed successfully');
                             setTimeout(function(){$("#errorForm").addClass('d-none').addClass('hide').removeClass('d-block').removeClass('show').html('');
-                             $.redirect('../../views/user/login', { user: $("#email").val(), pass : $("#password").val()});
+                             $.redirect('../../views/user/login', { userR: $("#email").val(), pass : $("#password").val()});
                             }, 2000);
 
                 },

@@ -8,7 +8,7 @@
 			<form method="POST" id="formLogIn">
 				<div class="form-group">
 					<label for="email">Email address</label>
-					<input type="email" class="form-control form-control-sm" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="<?php echo isset($_POST['user']) ? $_POST['user'] : ''; ?>" required>
+					<input type="email" class="form-control form-control-sm" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="<?php echo isset($_POST['userR']) ? $_POST['userR'] : ''; ?>" required>
 				</div>
 				<div class="form-group">
 					<label for="password">Password</label>
