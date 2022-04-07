@@ -1,10 +1,10 @@
-# PROYECT INGETEAM
+# Project Ingeteam
 
 This project tries to solve the problem of task management for the employees of a company, who need a task manager that allows them to carry out an adequate organization on a day-to-day basis.
 
 This tool allows the creation of users, to later be able to carry out an individualized management of their own tasks, allowing them to create, edit and delete the tasks that they require.
 
-### INSTALLATION
+### Installation
 For the installation of the project it is only necessary to make a clone of the public repository where it is located
 
 To do this, go to the directory where you want to clone, and using the CMD console, execute the following code:
