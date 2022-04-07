@@ -16,4 +16,4 @@ include_once '../../config/parameters.php';
 </head>
 <body class="align">
 <input type="hidden" id="base_url" name="base_url" value="<?php echo base_url; ?>">
-<?php if(isset($_POST['user'])){ ?><div class="fixed-header"><div class="container_nav"><nav><a href="#">Panel</a></nav></div></div><?php } ?>
+<?php if(isset($_POST['user'])){ ?><div class="fixed-header"><div class="container_nav"><nav><a href="#">Panel</a><a href="<?php echo base_url ?>">Log out</a></nav></div></div><?php } ?>

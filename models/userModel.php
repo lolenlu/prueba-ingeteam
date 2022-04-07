@@ -3,6 +3,7 @@ require_once 'baseModel.php';
 
 class userModel extends baseModel{
 
+        public int $id;
         public string $name;
         public string $email;
         public string $description;
@@ -12,6 +13,10 @@ class userModel extends baseModel{
 
     public function __construct(){
         parent::__construct();
+    }
+
+    public function setId(int $id){
+        $this->id = $id;
     }
 
     public function setName(string $name){
@@ -36,6 +41,10 @@ class userModel extends baseModel{
 
     public function setPassword(string $password){
         $this->password = $this->conn->real_escape_string(password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]));
+    }
+
+    public function getId(){
+        return $this->id;
     }
 
     public function getName(): string{
@@ -76,7 +85,6 @@ class userModel extends baseModel{
         $stmt = $this->conn->prepare("INSERT INTO `web_user` (`id`, `created`, `name`, `email`, `description`, `address`, `postal_code`, `password`) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("sssssss",$now,$name,$email,$description,$address,$postalCode,$password);
         $stmt->execute();
-
         return true;
         } catch (\Exception $e) {
             return $e->getMessage();
@@ -94,7 +102,7 @@ class userModel extends baseModel{
         }
     }
 
-    public function getId(string $emailUser){
+    public function getIdForEmail(string $emailUser){
         try {
         $stmt = $this->conn->prepare("SELECT id FROM web_user WHERE email=?");
         $stmt->bind_param("s", $emailUser);

@@ -61,7 +61,7 @@ class userController {
     public function newTaskForUser(){
         if(isset($_POST)){
             $webUser = new userModel();
-            $idUser=$webUser->getId($_POST['email']);
+            $idUser=$webUser->getIdForEmail($_POST['email']);
 
             $newTask= new taskModel();
             $newTask->setName($_POST['title']);
@@ -70,6 +70,40 @@ class userController {
 
             echo $newTask->saveTaskForUser($idUser,$idTask);
 
+        }else{
+            echo 'Problem with parameters';
+        }
+            
+    }
+
+    public function dataTaskForUser(){
+        if(isset($_POST['id'])){
+            $task = new taskModel();
+            echo json_encode($task->getTaskForId($_POST['id']));
+        }else{
+            echo 'Problem with parameters';
+        }
+            
+    }
+
+    public function removeTaskForUser(){
+        if(isset($_POST['id'])){
+            $newTask= new taskModel();
+            echo $newTask->removeTaskForUser($_POST['id']);
+        }else{
+            echo 'Problem with parameters';
+        }
+            
+    }
+
+    public function editTaskForUser(){
+        if(isset($_POST)){
+            $editTask = new taskModel();
+            $editTask->setId($_POST['id']);
+            $editTask->setName($_POST['title']);
+            $editTask->setDescription($_POST['description']);
+
+            echo $editTask->editTaskForUser($editTask);
         }else{
             echo 'Problem with parameters';
         }
