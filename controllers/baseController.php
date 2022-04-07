@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 require_once 'autoload.php';
 
 if(isset($_GET['controller'])){
@@ -20,4 +22,3 @@ if(class_exists($nombre_controlador)){
 }else{
 	header('Location:views/user/login'); 
 }
-  

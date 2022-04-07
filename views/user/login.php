@@ -8,11 +8,11 @@
 			<form method="POST" id="formLogIn">
 				<div class="form-group">
 					<label for="email">Email address</label>
-					<input type="email" class="form-control form-control-sm" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+					<input type="email" class="form-control form-control-sm" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="<?php echo isset($_POST['user']) ? $_POST['user'] : ''; ?>" required>
 				</div>
 				<div class="form-group">
-					<label for="passw">Password</label>
-					<input type="password" class="form-control form-control-sm" id="passw" required>
+					<label for="password">Password</label>
+					<input type="password" class="form-control form-control-sm" id="password" name="password" value="<?php echo isset($_POST['pass']) ? $_POST['pass'] : ''; ?>" required>
 				</div>
 				<button type="submit" class="btn btn-primary btn-block">Sign in</button>
 				

@@ -83,14 +83,23 @@ class userModel extends baseModel{
         }
     }
 
-    public function getOneUser(int $idUser){
+    public function getOneUser(string $emailUser){
         try {
-
-        $stmt = $this->conn->prepare("SELECT * FROM web_user WHERE id=?");
-        $stmt->bind_param("i", $idUser);
+        $stmt = $this->conn->prepare("SELECT * FROM web_user WHERE email=?");
+        $stmt->bind_param("s", $emailUser);
         $stmt->execute();
-
         return $stmt->get_result()->fetch_assoc();
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
+    }
+
+    public function getId(string $emailUser){
+        try {
+        $stmt = $this->conn->prepare("SELECT id FROM web_user WHERE email=?");
+        $stmt->bind_param("s", $emailUser);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_assoc()['id'];
         } catch (\Exception $e) {
             return $e->getMessage();
         }
