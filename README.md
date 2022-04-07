@@ -51,21 +51,8 @@ If we give 'Sign in', it will allow us to enter the Panel. Inside, we can perfor
 
 
 ### FlowChart
-```flow
-st=>start: Register
-op=>operation: Login
-cond=>condition: Successful Yes or No?
-op2=>end: Panel
-
-st->op->cond
-cond(yes)->op2
-cond(no)->op
-```
 ![Alt text](assets/img/flowchart.jpg?raw=true "Title")
 
 ### Diagram Tables
-                    
-```seq
-webUser->webUserTask: web_user_id
-task->webUserTask: task_id
-```
+
+![Alt text](assets/img/diagramtable.jpg?raw=true "Title")
