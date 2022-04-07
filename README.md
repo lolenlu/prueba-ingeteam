@@ -61,6 +61,7 @@ st->op->cond
 cond(yes)->op2
 cond(no)->op
 ```
+![Alt text](assets/img/flowchart.jpg?raw=true "Title")
 
 ### Diagram Tables
                     
