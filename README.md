@@ -40,7 +40,7 @@ class Database{
 - PhpMyAdmin: 5.1.3
 - MySql: 5.7.31
 
-###Use Application
+### Use Application
 
 First you must register a user to access the application Panel. To do this we will click on the link ''Create One".
 
