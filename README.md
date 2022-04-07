@@ -56,3 +56,8 @@ If we give 'Sign in', it will allow us to enter the Panel. Inside, we can perfor
 ### Diagram Tables
 
 ![Alt text](assets/img/diagramtable.jpg?raw=true "Title")
+
+
+### Additional
+
+- Added task search filter in the list of user tasks
